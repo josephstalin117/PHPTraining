@@ -1,6 +1,63 @@
 IT俱乐部项目培训材料
 =============================================
 
+- [PHP基础模块](#php)
+    - [从SNS开始](#sns)
+        - [什么是msysGit](#msysgit)
+        - [安装msysGit](#msysgit-1)
+        - [初始化配置](#)
+        - [配置SSH密钥](#ssh)
+    - [语法、常量、变量及数据类型详解](#-1)
+        - [基本结构控制语句](#-2)
+    - [运算符、流程控制](#-3)
+    - [循环结构、系统函数和自定义函数](#-4)
+    - [数组、多维数组和数组函数](#-5)
+    - [字符串操作变换](#-6)
+    - [文件操作函数](#-7)
+- [PHP与OOP](#phpoop)
+    - [面向对象的基本概念](#-8)
+        - [OOP](#oop)
+        - [ABSTRACTION](#abstraction)
+        - [CLASS](#class)
+        - [OBJECT](#object)
+        - [Function(Method)](#functionmethod)
+        - [Message Passing(also known as method calling)](#message-passingalso-known-as-method-calling)
+        - [Property](#property)
+        - [Inheritance(also known as subclasses)](#inheritancealso-known-as-subclasses)
+        - [Encapsulation](#encapsulation)
+        - [Polymorphism](#polymorphism)
+    - [面向对象初始化this关键字](#this)
+    - [初类的封装关键字](#-9)
+        - [Visibility](#visibility)
+        - [Static Keyword](#static-keyword)
+        - [Scope Resolution Operator (::)](#scope-resolution-operator-)
+    - [类的继承extends](#extends)
+        - [Object Inheritance](#object-inheritance)
+        - [Constructors and Destructors](#constructors-and-destructors)
+    - [抽象类abstract](#abstract)
+        - [Overloading](#overloading)
+            - [Property overloading](#property-overloading)
+    - [mysqli](#mysqli)
+        - [The object-oriented interface](#the-object-oriented-interface)
+            - [guest](#guest)
+            - [mysqli](#mysqli-1)
+    - [常用关键字](#-10)
+    - [多态的介绍与优势](#-11)
+    - [相关魔术方法](#-12)
+- [ThinkPHP与千木服务架构](#thinkphp)
+    - [MVC初学体验与服务器环境部署](#mvc)
+        - [如何学习](#-13)
+        - [MVC](#mvc-1)
+    - [目录结构和命名](#-14)
+    - [项目部署和常见参数](#-15)
+    - [系统常量及URL模式](#url)
+    - [开发规范](#-16)
+    - [调试工具及空操作](#-17)
+    - [HTML5快速入门](#html5)
+    - [模板引擎](#-18)
+    - [服务类拼装](#-19)
+    - [表单设计与提交规范](#-20)
+
 # PHP基础模块
 
 ## 从SNS开始
@@ -607,6 +664,12 @@ Property overloading only works in object context. These magic methods will not 
         /**  Location for overloaded data.  */
         private $data = array();
 
+        /**  Overloading not used on declared properties.  */
+        public $declared = 1;
+
+        /**  Overloading only used on this when accessed outside the class.  */
+        private $hidden = 2;
+
         public function __set($name, $value){
             echo "Setting '$name' to '$value'\n";
             $this->data[$name] = $value;
@@ -637,6 +700,11 @@ Property overloading only works in object context. These magic methods will not 
         public function __unset($name){
             echo "Unsetting '$name'\n";
             unset($this->data[$name]);
+        }
+
+        /**  Not a magic method, just here for example.  */
+        public function getHidden(){
+            return $this->hidden;
         }
     }
 
@@ -690,14 +758,110 @@ Users migrating from the old mysql extension may prefer the procedural interface
     $result->close();
     $mydb->close();
 
+    echo $obj->declared . "\n\n";
+
+    echo "Let's experiment with the private property named 'hidden':\n";
+    echo "Privates are visible inside the class, so __get() not used...\n";
+    echo $obj->getHidden() . "\n";
+    echo "Privates not visible outside of class, so __get() is used...\n";
+    echo $obj->hidden . "\n";
+
+    
+## 常用关键字
+
+## 多态的介绍与优势
+
+## 相关魔术方法
 
 # ThinkPHP与千木服务架构
 
 ## MVC初学体验与服务器环境部署
 
-## 目录结构和命名
+### 如何学习
 
-## 项目部署和常见参数
+1. 编程的捷径就是没有捷径
+2. 多做代码，多实战，举一反三
+3. 学会看手册，学会搜索引擎
+4. 尽量开发出自己的一套完整项目
+5. 尽量使用到中间的每个功能
+6. 同一个效果尽量思考多种方法实现
+
+### MVC
+
+MVC 是一种将应用程序的逻辑层和表现层进行分离的方法。
+
+ThinkPHP 是基于MVC设计模式的。MVC只是一个抽象的概念，并没有明确的规定，ThinkPHP 中的MVC分层大致体现在：
+
+模型（Model）：模型的定义由 Model 类来完成。
+
+控制器（Controller）：应用控制器（核心控制器App类）和Action控制器都承担了控制器的角色，Action 控制器完成业务过程控制，而应用控制器负责调试控制。
+
+视图（View）：由View类和模板文件组成，模板做到了100%的分享，可以独立预览和制作。
+
+但实际上，ThinkPHP并不依赖M或者V，也就是说没有模型或者视图也一样可以工作。甚至也不依赖C，这是因为ThinkPHP在Action之上还有一个总控制器，即App控制器，负责应用的总调试，在没有C的情况下，必然存在视图V，否则就不再是一个完整的应用。
+
+总而言之，ThinkPHP的MVC模式只是提供了一种敏捷开发的手段，而不是拘泥于MVC本身。
+
+MVC框架概念图：
+![MVC](./img/MVC.jpg)
+
+开发原理图：
+![开发原理图](./img/structure.jpg)
+
+## 目录结构和项目部署
+
+        WebRoot/
+            |-ThinkPHP/
+            |-Student1/  →每个学员各自项目的仓库内容
+                  |-Common/
+                  |-Conf/
+                  |-Lang/
+                  |-Lib/
+                     |-Action/
+                         |-IndexAction.class.php  ↓培训用的示例控制器系列
+                         |-LoginAction.class.php
+                     |-Behavior/
+                     |-Model/
+                     |-Widget/
+                  |-Runtime/
+                  |-Tpl/
+                  |-index.php  →各学员彼此独立入口文件
+            |-Student2/
+                  |-Common/
+                  |-Conf/
+                  |-Lang/
+                  |-Lib/
+                  |-Runtime/
+                  |-Tpl/
+                  |-index.php
+            |-Student3/
+                  |-Common/
+                  |-Conf/
+                  |-Lang/
+                  |-Lib/
+                  |-Runtime/
+                  |-Tpl/
+                  |-index.php
+            |-StudentN/
+                  |-Common/
+                  |-Conf/
+                  |-Lang/
+                  |-Lib/
+                  |-Runtime/
+                  |-Tpl/
+                  |-index.php
+
+
+## 命名规范和常见参数
+
+类型         |规范
+-------------|---------------------------
+类名         |`NewClassName`
+类文件       |`NewClassName.class.php`
+变量名/函数名|`$the_var`/`the_function()`
+属性名       |`$this->newProperty`
+方法名       |`$this->newMethod()`
+常量名       |`CONST_VALUE`
 
 ## 系统常量及URL模式
 
