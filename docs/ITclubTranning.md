@@ -51,7 +51,7 @@ address：[相关地址](http://github.com/josephstalin117/PHPTraining)
 HTML档案最常用的扩展名（扩展名）是.html，但是像DOS这样的旧操作系统限制扩展名为最多3个字符，所以.htm扩展名也允许使用。现在.htm扩展名使用的比较少一些了，但是仍旧受到支持。编者可以用任何文本编辑器或所见即所得的HTML编辑器来编辑HTML文件。  
 早期的HTML语法规则定义较为松散，这有助于不熟悉网络出版的人采用。网页浏览器接受了这个事实，使之可以显示语法不严格的网页。随着时间的流逝，官方标准渐渐趋于严格的语法，但是浏览器继续显示一些远称不上合乎标准的HTML。使用XML的严格规则的XHTML（可扩展超文本标记语言）是W3C计划中的HTML的接替者。虽然很多人认为它已经成为当前的HTML标准，但是它实际上是一个独立的、和HTML平行发展的标准。W3C目前建议使用XHTML 1.1、XHTML 1.0或者HTML 4.01标准编写网页，但已有不少网页转用较新的 HTML5 编码撰写（如Google）。  
 
-* HTML 的实际运行  
+**HTML 的实际运行**  
 
 HTML（网页）于电脑系统上的实际运行应用，大多数的人都以为网页是在线运行,可是HTML并不是实际的在线运行，下面的程序是HTML实际于电脑系统中的真实程序：
 
@@ -63,15 +63,15 @@ HTML（网页）于电脑系统上的实际运行应用，大多数的人都以�
 
 ***
 
-* **HTML Headings**  
+**HTML Headings**    
 
 HTML headings are defined with the `<h1>` to `<h6>` tags.  
 
-* **HTML Paragraphs**
+**HTML Paragraphs**
 
 HTML paragraphs are defined with the `<p>` tag.  
 
-* **HTML Links**  
+**HTML Links**  
 
 HTML links are defined with the `<a>` tag.  
 
@@ -79,7 +79,7 @@ Example
 
 `<a href="http://weibo.com/itasso">This is a link</a>`
 
-* **HTML Images**
+**HTML Images**
 
 HTML images are defined with the `<img>` tag.
 
@@ -87,7 +87,7 @@ Example
 
 `<img src="itasso.jpg" width="104" height="142">`
 
-* **HTML Comments**
+**HTML Comments**
 
 Comments can be inserted into the HTML code to make it more readable and understandable. Comments are ignored by the browser and are not displayed.  
 
@@ -97,7 +97,7 @@ Example
 
 `<!-- This is a comment -->`  
 
-* **HTML Formatting Tags**  
+**HTML Formatting Tags**  
 
 HTML uses tags like `<b>` and `<i>` for formatting output, like bold or italic text.
 
@@ -105,7 +105,7 @@ These HTML tags are called formatting tags (look at the bottom of this page for 
 
 
 
-* **Styling HTML with CSS**  
+**Styling HTML with CSS**  
 
 CSS was introduced together with HTML 4, to provide a better way to style HTML elements.    
 
@@ -129,7 +129,7 @@ To use inline styles, use the style attribute in the relevant tag. The style att
 
 * *Internal Style Sheet*
 
-An internal style sheet can be used if one single document has a unique style. Internal styles are defined in the <head> section of an HTML page, by using the `<style>` tag, like this:  
+An internal style sheet can be used if one single document has a unique style. Internal styles are defined in the `<head>` section of an HTML page, by using the `<style>` tag, like this:  
 
 `<head>`  
 `<style type="text/css">`  
@@ -189,38 +189,38 @@ Example
 
   
 
-* **HTML Tables**
+**HTML Tables**
 
-Tables are defined with the <table> tag.  
+Tables are defined with the `<table>` tag.  
 
 A table is divided into rows (with the `<tr>` tag), and each row is divided into data cells (with the `<td>` tag). td stands for "table data," and holds the content of a data cell. A `<td>` tag can contain text, links, images, lists, forms, other tables, etc.  
 
 Table Example  
 
-`<table border="1">`  
-`<tr>`  
+`<table border="1">`    
+`<tr>`    
 `<td>row 1, cell 1</td>`  
-`<td>row 1, cell 2</td>`  
+`<td>row 1, cell 2</td>`    
+`</tr>`    
+`<tr>`    
+`<td>row 2, cell 1</td>`  
+`<td>row 2, cell 2</td>`  
 `</tr>`  
-`<tr>`  
-`<td>row 2, cell 1</td>`
-`<td>row 2, cell 2</td>`
-`</tr>`
-`</table>`
+`</table>`  
 
-* **HTML Unordered Lists**
-An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+**HTML Unordered Lists**
+An unordered list starts with the `<ul>` tag. Each list item starts with the `<li>` tag.
 
 The list items are marked with bullets (typically small black circles).
 
-`<ul>`  
-`<li>Coffee</li>`
-`<li>Milk</li>`
-`</ul>`
+`<ul>`   
+`<li>Coffee</li>`  
+`<li>Milk</li>`  
+`</ul>`  
 
  
 
-* **HTML Images - The <img> Tag and the Src Attribute**  
+**HTML Images - The `<img>` Tag and the Src Attribute**  
 
 In HTML, images are defined with the `<img>` tag.   
 
@@ -231,6 +231,12 @@ To display an image on a page, you need to use the src attribute. Src stands for
 Syntax for defining an image:
 
 `<img src="url" alt="some_text">`
+
+***
+
+**div+css**  
+
+
 
 
 
