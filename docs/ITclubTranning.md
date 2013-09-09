@@ -15,7 +15,7 @@ address：[相关地址](http://github.com/josephstalin117/PHPTraining)
 
 ## 培训结构
 
-![image](./project.jpg)
+![image](img/project.jpg)
 
 ## 关于13年下学期的培训计划
 
