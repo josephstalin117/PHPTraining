@@ -236,7 +236,35 @@ Syntax for defining an image:
 
 **div+css**  
 
+* *What is CSS?*
 
+CSS stands for Cascading Style Sheets  
+
+* Styles define how to display HTML elements  
+* Styles were added to HTML 4.0 to solve a problem  
+* External Style Sheets can save a lot of work  
+* External Style Sheets are stored in CSS files
+
+![image](img/css/selector.gif)  
+
+* *CSS Comments*
+
+Comments are used to explain your code, and may help you when you edit the source code at a later date. Comments are ignored by browsers.
+
+A CSS comment begins with `/*`, and ends with `*/`, like this:
+
+`/*This is a comment*/`  
+`p{`    
+`text-align:center;`  
+`/*This is another comment*/`  
+`color:black;`  
+`font-family:arial;`  
+`}`  
+
+* *CSS Id and Class*
+
+The id and class Selectors
+In addition to setting a style for a HTML element, CSS allows you to specify your own selectors called "id" and "class".
 
 
 
