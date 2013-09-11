@@ -261,12 +261,286 @@ A CSS comment begins with `/*`, and ends with `*/`, like this:
 `font-family:arial;`  
 `}`  
 
-* *CSS Id and Class*
-
-The id and class Selectors
-In addition to setting a style for a HTML element, CSS allows you to specify your own selectors called "id" and "class".
 
 
+* *The id Selectors*  
+
+In addition to setting a style for a HTML element, CSS allows you to specify your own selectors called "id" and "class".  
+
+The id selector is used to specify a style for a single, unique element.  
+
+The id selector uses the id attribute of the HTML element, and is defined with a "#".  
+
+The style rule below will be applied to the element with id="para1":  
+
+`#para1`  
+`{`  
+`text-align:center;`  
+`color:red;`  
+`}`  
+
+* *The class Selector*
+
+The class selector is used to specify a style for a group of elements. Unlike the id selector, the class selector is most often used on several elements.  
+
+This allows you to set a particular style for many HTML elements with the same class.  
+
+The class selector uses the HTML class attribute, and is defined with a "."  
+
+In the example below, all HTML elements with class="center" will be center-aligned:  
+
+`.center {text-align:center;}`
+
+You can also specify that only specific HTML elements should be affected by a class.  
+
+In the example below, all p elements with class="center" will be center-aligned:  
+
+`p.center {text-align:center;}`  
+
+* *Background Color*
+
+The background-color property specifies the background color of an element.  
+
+The background color of a page is defined in the body selector:  
+
+`body {background-color:#b0c4de;}`  
+
+With CSS, a color is most often specified by:  
+
+a HEX value - like "#ff0000"  
+an RGB value - like "rgb(255,0,0)"  
+a color name - like "red"  
+
+* *Background Image*
+
+The background-image property specifies an image to use as the background of an element.  
+
+By default, the image is repeated so it covers the entire element.  
+
+The background image for a page can be set like this:  
+
+`body {background-image:url('paper.gif');}`
+
+* *Background Image - Repeat Horizontally or Vertically*
+
+By default, the background-image property repeats an image both horizontally and vertically.  
+
+Some images should be repeated only horizontally or vertically, or they will look strange, like this:   
+
+`body`
+`{`
+`background-image:url('gradient2.png');`
+`}`
+
+If the image is repeated only horizontally (repeat-x), the background will look better:  
+
+`body`  
+`{`  
+`background-image:url('gradient2.png');`  
+`background-repeat:repeat-x;`  
+`}`  
+
+* *Background Image - Set position and no-repeat*
+
+Remark When using a background image, use an image that does not disturb the text.  
+
+Showing the image only once is specified by the background-repeat property:  
+
+`body`  
+`{`  
+`background-image:url('img_tree.png');`  
+`background-repeat:no-repeat;`  
+`}`  
+
+* *Text Alignment*  
+
+The text-align property is used to set the horizontal alignment of a text.  
+
+Text can be centered, or aligned to the left or right, or justified.  
+
+`h1 {text-align:center;}`
+`p.date {text-align:right;}`
+
+* *Text Decoration*
+
+The text-decoration property is used to set or remove decorations from text.  
+
+The text-decoration property is mostly used to remove underlines from links for design purposes:  
+`a {text-decoration:none;}`  
+`h1 {text-decoration:overline;}`  
+`h2 {text-decoration:line-through;}`  
+`h3 {text-decoration:underline;}`  
+
+* *Font Family*
+
+The font family of a text is set with the font-family property.  
+
+The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font.  
+
+Start with the font you want, and end with a generic(通用) family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+Note: If the name of a font family is more than one word, it must be in quotation marks, like font-family: "Times New Roman".  
+
+More than one font family is specified in a comma-separated list:  
+
+`p{font-family:"Times New Roman", Times, serif;}`  
+
+* *Set Font Size With Pixels*
+
+Setting the text size with pixels gives you full control over the text size:
+
+`h1 {font-size:40px;}`  
+`h2 {font-size:30px;}`  
+`p {font-size:14px;}`  
+
+* *Styling Links and Pseudo-classes*
+
+Links can be styled with any CSS property (e.g. color, font-family, background, etc.).  
+
+In addition, links can be styled differently depending on what state they are in.  
+
+The four links states are:
+
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+`a:link {color:#FF0000;}      /* unvisited link */`  
+`a:visited {color:#00FF00;}  /* visited link */`  
+`a:hover {color:#FF00FF;}  /* mouse over link */`  
+`a:active {color:#0000FF;}  /* selected link */`  
+
+* *The CSS Box Model*  
+
+![images](img/css/box-model.gif)
+
+Explanation of the different parts:  
+
+**Margin** - Clears an area around the border. The margin does not have a background color, it is completely transparent  
+**Border** - A border that goes around the padding and content. The border is affected by the background color of the box  
+**Padding** - Clears an area around the content. The padding is affected by the background color of the box  
+**Content** - The content of the box, where text and images appear  
+
+In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.   
+
+Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add the padding, borders and margins.  
+
+**边框风格属性(border-style)**  
+
+这个属性用来设定上下左右边框的风格，它的值如下：  
+
+* none (没有边框，无论边框宽度设为多大)
+* dotted (点线式边框)
+* dashed (破折线式边框)
+* solid (直线式边框)
+* double (双线式边框)
+* groove (槽线式边框)
+* ridge(脊线式边框)
+* inset (内嵌效果的边框)
+* outset (突起效果的边框)  
+
+**Margin**
+
+The margin clears an area around an element (outside the border). The margin does not have a background color, and is completely transparent(阿卡林).  
+
+The top, right, bottom, and left margin can be changed independently using separate properties. A shorthand margin property can also be used, to change all margins at once.  
+
+auto:The browser calculates a margin  
+length:Specifies a margin in px, pt, cm, etc. Default value is 0px  
+%:Specifies a margin in percent of the width of the containing element  
+inherit:Specifies that the margin should be inherited from the parent element  
+
+`margin-top:100px;`  
+`margin-bottom:100px;`  
+`margin-right:50px;`  
+`margin-left:50px;`  
+
+**Padding - Individual sides**
+
+In CSS, it is possible to specify different padding for different sides:  
+
+`padding-top:25px;`  
+`padding-bottom:25px;`  
+`padding-right:50px;`  
+`padding-left:50px;`  
+
+**CSS Display - Block and Inline Elements**
+
+A block element is an element that takes up the full width available, and has a line break before and after it.  
+
+`<!DOCTYPE html>`  
+`<html>`   
+`<head>`  
+`<style>`  
+`span{`  
+`display:inline;`  
+`}`  
+`</style>`  
+`</head>`  
+`<body>`  
+  
+`<h2>Nirvana</h2>`  
+`<span>Record: MTV Unplugged in New York</span>`  
+`<span>Year: 1993</span>`  
+`<h2>Radiohead</h2>`  
+`<span>Record: OK Computer</span>`  
+`<span>Year: 1997</span>`  
+
+`</body>`  
+`</html>`  
+  
+
+* *绝对定位和相对定位*  
+
+The CSS positioning properties allow you to position an element. It can also place an element behind another, and specify what should happen when an element's content is too big.
+
+Elements can be positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the positioning method.
+
+There are four different positioning methods.
+
+Absolute，CSS中的写法是：position:absolute  
+他的意思是绝对定位，他是参照浏览器的左上角，配合TOP、RIGHT、BOTTOM、LEFT(下面简称TRBL)进行定位，在没有设定TRBL，默认依据父级的做标原始点为原始点。如果设定TRBL并且父级没有设定position属性，那么当前的absolute则以浏览器左上角为原始点进行定位，位置将由TRBL决定。将对象从文档流中拖出，使用left，right，top，bottom等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。如果不存在这样的父对象，则依据body对象。  
+
+![images](img/css/absolute.gif)
+
+一般来讲，网页居中的话用Absolute就容易出错，因为网页一直是随着分辨率的大小自动适应的，而Absolute则会以浏览器的左上角为原始点，不会应为分辨率的变化而变化位置。很多人出错就在于这点上出错。而网页居左其特性与Relative很相似，但是还是有本质的区别的。  
+
+![images](img/css/relative.gif)
+
+Relative，CSS中的写法是：position:relative; 他的意思是相对定位，他是参照父级的原始点为原始点，无父级则以文本流的顺序在上一个元素的底部为原始点，配合TRBL进行定位，当父级内有padding等CSS属性时，当前级的原始点则参照父级内容区的原始点进行定位。  
+
+relative常常于margin,float配合使用，而absolute常常用于top等。  
+
+* *What is CSS Float?*
+
+With CSS float, an element can be pushed to the left or right, allowing other elements to wrap around it.  
+
+Float is very often used for images, but it is also useful when working with layouts.  
+
+Elements are floated horizontally, this means that an element can only be floated left or right, not up or down.  
+
+A floated element will move as far to the left or right as it can. Usually this means all the way to the left or right of the containing element.  
+
+The elements after the floating element will flow around it.  
+
+The elements before the floating element will not be affected.  
+
+If an image is floated to the right, a following text flows around it, to the left:  
+
+`img{`  
+`float:right;`  
+`}`  
+
+center
+
+`div{`
+	`margin:auto;`
+`}`
+
+最后之作
+
+***
 
 ##### photoshop速成  
 ##### markdown学习  
