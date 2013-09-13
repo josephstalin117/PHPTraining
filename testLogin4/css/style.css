@@ -1,0 +1,75 @@
+body{ 
+	background-image: url('../images/background.gif');
+}
+#form{
+	width: 278px;
+	height: 222px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -139px;
+	margin-top: -111px;
+	background: url('../images/form.gif');
+}
+
+.pos{
+	position: relative;
+	float: left;
+	width: 278px;
+}
+.component{
+	font-size: 11px;
+	font-family: Arial;
+	color: #745944;
+	font-weight: bold;
+}
+#signup{
+	margin-top: 21px;
+	text-align: center;
+}
+#name{
+	margin-top: 11px;
+	margin-left: 17px;
+}
+
+#email{
+	margin-top: 19px;
+	margin-left: 17px;
+}
+
+/*inputbox*/
+.coInp{
+	width: 243px;
+	height: 26px;
+	margin-left: 17px;
+	margin-top: 11px;
+	background: url(../images/input.gif);
+	border: none;
+}
+
+/*button*/
+#button{
+	position: relative;
+	float: right;
+	width: 66px;
+	height: 29px;
+	margin-top: 15px;
+	margin-right: 17px;
+	background: url('../images/button.gif') no-repeat;
+	text-align: center;
+	display: block;
+	padding-top: 6px;
+}
+#button:hover{
+	cursor: pointer;
+	background: url('../images/button2.gif') no-repeat;
+}
+a{
+	color: #528121;
+	text-decoration: none;
+
+}
+
+
+
+

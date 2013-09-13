@@ -538,11 +538,13 @@ center
 	`margin:auto;`
 `}`
 
-最后之作
 
 ***
 
 ##### photoshop速成  
+
+[地址](https://github.com/josephstalin117/TheTranningPlanning/blob/master/TranningPlanning/project_trainning.md)
+
 ##### markdown学习  
 
 Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）和亚伦·斯沃茨（Aaron Swartz）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。
@@ -600,6 +602,8 @@ Sublime Text is a sophisticated text editor for code, markup and prose.You'll lo
 `import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'`
 
 ##### 静态登录设计  
+
+![images](img/css/Renderings.jpg)
 
 ##### 交流与点评    
 
