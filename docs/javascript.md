@@ -890,7 +890,50 @@ Examples:
 
 * $("#test").hide() - hides the element with id="test".
 
+* *The Document Ready Event*
 
+
+		$(document).ready(function(){
+
+   			// jQuery methods go here...
+
+		});
+
+Tip: The jQuery team has also created an even shorter method for the document ready event:  
+
+		$(function(){
+   			// jQuery methods go here...
+		});
+
+#### jQuery Selectors
+
+Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.  
+
+jQuery selectors are one of the most important parts of the jQuery library.  
+
+* *jQuery Selectors*
+
+jQuery selectors allow you to select and manipulate HTML element(s).  
+
+jQuery selectors are used to "find" (or select) HTML elements based on their id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.  
+
+All selectors in jQuery start with the dollar sign and parentheses: $().  
+
+* *The element Selector*  
+
+The jQuery element selector selects elements based on the element name.  
+
+You can select all `<p>` elements on a page like this:  
+
+		$("p")
+
+When a user clicks on a button, all <p> elements will be hidden:  
+
+		$(document).ready(function(){
+  			$("button").click(function(){
+    			$("p").hide();
+  			});
+		});
 
 ## jQuery动画
 ## jQuery的DOM操作
