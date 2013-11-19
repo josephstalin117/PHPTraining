@@ -89,20 +89,20 @@ To use inline styles, use the style attribute in the relevant tag. The style att
 
 An internal style sheet can be used if one single document has a unique style. Internal styles are defined in the `<head>` section of an HTML page, by using the `<style>` tag, like this:  
 
-`<head>`  
-`<style type="text/css">`  
-`body {background-color:yellow;}`  
-`p {color:blue;}`  
-`</style>`  
-`</head>`
+		<head>  
+			<style type="text/css">  
+				body {background-color:yellow;}  
+				p {color:blue;}  
+			</style>  
+		</head>
 
 * *External Style Sheet*
 
 An external style sheet is ideal when the style is applied to many pages. With an external style sheet, you can change the look of an entire Web site by changing one file. Each page must link to the style sheet using the `<link>` tag. The `<link>` tag goes inside the `<head>` section:  
 
-`<head>`
-`<link rel="stylesheet" type="text/css" href="mystyle.css">`
-`</head>`
+		<head>
+			<link rel="stylesheet" type="text/css" href="mystyle.css">
+		</head>
 
 * *HTML Style Tags*
 
@@ -119,15 +119,15 @@ The background-color property defines the background color for an element:
 
 Example  
 
-`<!DOCTYPE html>`  
-`<html>`  
+		<!DOCTYPE html>  
+		<html>  
 
-`<body style="background-color:yellow;">`  
-`<h2 style="background-color:red;">This is a heading</h2>`  
-`<p style="background-color:green;">This is a paragraph.</p>`  
-`</body>`  
+			<body style="background-color:yellow;">  
+				<h2 style="background-color:red;">This is a heading</h2>  
+				<p style="background-color:green;">This is a paragraph.</p>  
+			</body>  
 
-`</html>`  
+		</html>  
 
 * *HTML Style Example - Font, Color and Size*
 
@@ -135,15 +135,15 @@ The font-family, color, and font-size properties defines the font, color, and si
 
 Example  
 
-`<!DOCTYPE html>`  
-`<html>`  
+		<!DOCTYPE html>  
+		<html>  
 
-`<body>`  
-`<h1 style="font-family:verdana;">A heading</h1>`  
-`<p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>`  
-`</body>`  
+			<body>  
+				<h1 style="font-family:verdana;">A heading</h1>  
+				<p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>  
+			</body>  
 
-`</html>`  
+		</html>  
 
   
 
@@ -155,26 +155,26 @@ A table is divided into rows (with the `<tr>` tag), and each row is divided into
 
 Table Example  
 
-`<table border="1">`    
-`<tr>`    
-`<td>row 1, cell 1</td>`  
-`<td>row 1, cell 2</td>`    
-`</tr>`    
-`<tr>`    
-`<td>row 2, cell 1</td>`  
-`<td>row 2, cell 2</td>`  
-`</tr>`  
-`</table>`  
+		<table border="1">    
+			<tr>    
+				<td>row 1, cell 1</td>  
+				<td>row 1, cell 2</td>    
+			</tr>    
+			<tr>    
+				<td>row 2, cell 1</td>  
+				<td>row 2, cell 2</td>  
+			</tr>  
+		</table>  
 
 **HTML Unordered Lists**
 An unordered list starts with the `<ul>` tag. Each list item starts with the `<li>` tag.
 
 The list items are marked with bullets (typically small black circles).
 
-`<ul>`   
-`<li>Coffee</li>`  
-`<li>Milk</li>`  
-`</ul>`  
+		<ul>   
+			<li>Coffee</li>  
+			<li>Milk</li>  
+		</ul>  
 
  
 
@@ -231,11 +231,10 @@ The id selector uses the id attribute of the HTML element, and is defined with a
 
 The style rule below will be applied to the element with id="para1":  
 
-`#para1`  
-`{`  
-`text-align:center;`  
-`color:red;`  
-`}`  
+		#para1{  
+			text-align:center;  
+			color:red;  
+		}  
 
 * *The class Selector*
 
@@ -285,18 +284,16 @@ By default, the background-image property repeats an image both horizontally and
 
 Some images should be repeated only horizontally or vertically, or they will look strange, like this:   
 
-`body`
-`{`
-`background-image:url('gradient2.png');`
-`}`
+		body{
+			background-image:url('gradient2.png');
+		}
 
 If the image is repeated only horizontally (repeat-x), the background will look better:  
 
-`body`  
-`{`  
-`background-image:url('gradient2.png');`  
-`background-repeat:repeat-x;`  
-`}`  
+		body{  
+			background-image:url('gradient2.png');  
+			background-repeat:repeat-x;  
+		}  
 
 * *Background Image - Set position and no-repeat*
 
@@ -304,11 +301,10 @@ Remark When using a background image, use an image that does not disturb the tex
 
 Showing the image only once is specified by the background-repeat property:  
 
-`body`  
-`{`  
-`background-image:url('img_tree.png');`  
-`background-repeat:no-repeat;`  
-`}`  
+		body{  
+			background-image:url('img_tree.png');  
+			background-repeat:no-repeat;  
+		}  
 
 * *Text Alignment*  
 
@@ -347,9 +343,9 @@ More than one font family is specified in a comma-separated list:
 
 Setting the text size with pixels gives you full control over the text size:
 
-`h1 {font-size:40px;}`  
-`h2 {font-size:30px;}`  
-`p {font-size:14px;}`  
+		h1 {font-size:40px;}  
+		h2 {font-size:30px;}  
+		p {font-size:14px;}  
 
 * *Styling Links and Pseudo-classes*
 
@@ -364,10 +360,10 @@ a:visited - a link the user has visited
 a:hover - a link when the user mouses over it
 a:active - a link the moment it is clicked
 
-`a:link {color:#FF0000;}      /* unvisited link */`  
-`a:visited {color:#00FF00;}  /* visited link */`  
-`a:hover {color:#FF00FF;}  /* mouse over link */`  
-`a:active {color:#0000FF;}  /* selected link */`  
+		a:link {color:#FF0000;}      /* unvisited link */  
+		a:visited {color:#00FF00;}  /* visited link */  
+		a:hover {color:#FF00FF;}  /* mouse over link */  
+		a:active {color:#0000FF;}  /* selected link */  
 
 * *The CSS Box Model*  
 
@@ -427,27 +423,85 @@ In CSS, it is possible to specify different padding for different sides:
 
 A block element is an element that takes up the full width available, and has a line break before and after it.  
 
-`<!DOCTYPE html>`  
-`<html>`   
-`<head>`  
-`<style>`  
-`span{`  
-`display:inline;`  
-`}`  
-`</style>`  
-`</head>`  
-`<body>`  
+		<!DOCTYPE html>  
+		<html>  
+			<head>  
+				<style>  
+					span{  
+						display:inline;  
+					}  
+				</style>  
+			</head>  
+			<body>  
   
-`<h2>Nirvana</h2>`  
-`<span>Record: MTV Unplugged in New York</span>`  
-`<span>Year: 1993</span>`  
-`<h2>Radiohead</h2>`  
-`<span>Record: OK Computer</span>`  
-`<span>Year: 1997</span>`  
+				<h2>Nirvana</h2>  
+				<span>Record: MTV Unplugged in New York</span>  
+				<span>Year: 1993</span>  
+				<h2>Radiohead</h2>  
+				<span>Record: OK Computer</span>  
+				<span>Year: 1997</span>  
 
-`</body>`  
-`</html>`  
-  
+			</body>  
+		</html>  
+
+
+**border-radius Property**  
+
+This property allows you to add rounded borders to elements!  
+
+**transition**
+
+With CSS3, we can add an effect when changing from one style to another, without using Flash animations or JavaScripts.  
+
+		.plot {
+			background:rgb(175,50,50);
+  			width: 20px;
+  			height: 20px;
+  			border-radius: 20px;
+  			display: block;
+  			-webkit-transition: 0.5s;
+     		-moz-transition: 0.5s;
+      		-ms-transition: 0.5s;
+       		-o-transition: 0.5s;
+          	transition: 0.5s;
+		}
+
+		.plot:hover {
+  			width: 50px;
+  			height: 50px;
+  			border-radius: 100px;
+  			background: blue;
+		}
+
+**CSS3 Transitions**
+
+The transform-origin property allows you to change the position on transformed elements.  
+
+2D transformed element can change the x- and y-axis of the element.3D transformed element can also change the z-axis of the element.  
+
+deg:degree
+
+		.box {
+			border-style: solid;
+    		border-width: 1px;
+    		display: block;
+    		width: 100px;
+    		height: 100px;
+    		background-color: #0000FF;
+    		-moz-transition:width 2s, height 2s, background-color 2s, -moz-transform 2s;
+    		-webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    		-o-transition:width 2s, height 2s, background-color 2s, -o-transform 2s;
+    		transition:width 2s, height 2s, background-color 2s, transform 2s;
+		}
+		.box:hover {
+    		background-color: #FFCCCC;
+    		width:200px;
+    		height:200px;
+    		-moz-transform:rotate(180deg);
+    		-webkit-transform:rotate(180deg);
+    		-o-transform:rotate(180deg);
+    		transform:rotate(180deg);
+		}
 
 * *绝对定位和相对定位*  
 
