@@ -3,7 +3,7 @@
 
 # 五号任务培训进程
 
-author：林永泽   
+author：josephlin   
 weibo：josephstalin  
 
 本次项目教材托管于github  
